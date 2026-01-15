@@ -109,7 +109,7 @@ export default function Welcome({ onEntry }) {
                 className="mb-8 w-full max-w-[300px] md:max-w-none mx-auto px-4"
             >
                 <div className="w-16 h-[1px] bg-neutral-600 mx-auto mb-2" />
-                <span className="text-[10px] uppercase tracking-[0.4em] text-neutral-400">Bienvenidos a la invitación de</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-neutral-400">Te damos a la invitación de</span>
             </motion.div>
 
             <h1 className="font-serif text-4xl md:text-5xl mb-6 leading-tight tracking-[0.2em] flex flex-col items-center">

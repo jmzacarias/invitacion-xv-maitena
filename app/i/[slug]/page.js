@@ -93,12 +93,12 @@ function InvitationContent({ params }) {
   };
 
   const event = {
-    title: "Mis 15 Años",
-    name: "Maitena",
-    date: "2026-03-21T20:00:00",
-    place: "Jah Jireh",
-    map: "Tres Cruces 1915, Rafael Castillo",
-  };
+      title: "Mis 15 Años",
+      name: "Maitena",
+      date: "2026-03-21T21:00:00-03:00", 
+      place: "Jah Jireh",
+      map: "Tres Cruces 1915, Rafael Castillo",
+    };
 
   return (
     <div className="min-h-screen w-full bg-[#3A3A3A] flex justify-center items-start">
