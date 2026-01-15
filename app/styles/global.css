@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Estas variables deben coincidir con las que Next.js inyecta */
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  @apply antialiased;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-playfair);
+}
+
+:root {
+  /* Estas variables deben coincidir con las que Next.js inyecta */
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+}
+
+.premium-button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 40px;
+  min-width: 175px;
+
+  border-radius: 9999px;
+  border: 1px solid rgba(192, 192, 192, 0.2);
+
+  color: #c0c0c0;
+  background: transparent;
+
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.premium-button:hover {
+  background-color: #c0c0c0;
+  color: #000;
+  border-color: #c0c0c0;
+}
+
+/* ===============================
+   MODAL CALENDARIO
+================================ */
+
+.calendar-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-modal {
+  background: #1a1a1a;
+  border: 1px solid rgba(192, 192, 192, 0.2);
+  border-radius: 20px;
+
+  padding: 32px;
+  width: 90%;
+  max-width: 360px;
+
+  text-align: center;
+}
+
+.calendar-modal-title {
+  color: #c0c0c0;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 24px;
+}
+
+.calendar-link {
+  display: block;
+  padding: 12px;
+  margin-bottom: 12px;
+
+  border-radius: 9999px;
+  border: 1px solid rgba(192, 192, 192, 0.2);
+
+  color: #c0c0c0;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+
+  transition: all 0.4s ease;
+}
+
+.calendar-link:hover {
+  background: #c0c0c0;
+  color: #000;
+}
+
+.calendar-close {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: rgba(192, 192, 192, 0.5);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.calendar-close:hover {
+  color: #c0c0c0;
+}
+
+/* app/globals.css */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(192, 192, 192, 0.3);
+  border-radius: 10px;
+}
