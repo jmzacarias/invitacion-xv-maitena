@@ -1,4 +1,4 @@
-import "@/app/styles/global.css"; // Verifica que la ruta sea exacta a tu carpeta
+import "@/app/styles/global.css";
 export const metadata = {
   title: "Mi Invitación Digital",
   description: "Te invito a mi evento especial",

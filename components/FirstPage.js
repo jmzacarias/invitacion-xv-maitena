@@ -54,9 +54,7 @@ export default function FirstPage() {
   );
 
   return (
-    /* CAMBIOS AQUÍ: lg:mt-0 y lg:rounded-none para PC */
     <section className="relative z-10 -mt-[35vh] lg:mt-0 w-full bg-[#1a1a1a] rounded-t-[40px] lg:rounded-none shadow-[0_-20px_50px_rgba(0,0,0,0.5)] lg:shadow-none">
-      {/* h-screen en PC para emparejar con el Hero */}
       <div className="relative w-full min-h-screen lg:h-full flex flex-col items-center justify-center p-10 overflow-hidden border-t lg:border-t-0 lg:border-l border-white/5">
         
         <CornerFrame className="top-4 left-4 md:top-8 md:left-8 opacity-40" />

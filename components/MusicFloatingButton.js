@@ -1,12 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Music, Music2 } from "lucide-react"; // O cualquier librería de iconos que uses
+import { Music} from "lucide-react"; 
 
 export default function MusicFloatingButton({ audioRef, isStarted }) {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Sincronizar el estado del botón con el audio real
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -59,7 +58,6 @@ export default function MusicFloatingButton({ audioRef, isStarted }) {
               className="relative"
             >
               <Music size={20} className="opacity-40" />
-              {/* Línea cruzada para el efecto "tachado" */}
               <div className="absolute top-1/2 left-0 w-full h-[2px] bg-[#c0c0c0] rotate-45" />
             </motion.div>
           )}

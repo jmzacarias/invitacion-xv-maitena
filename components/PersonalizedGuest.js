@@ -27,9 +27,7 @@ export default function PersonalizedGuest({ guestData }) {
           ) : (
             guestData.map((invitado, i) => (
               <React.Fragment key={i}>
-                {/* Contenedor con overflow visible forzado para que 
-                   la "G" o los remates no se corten nunca. 
-                */}
+
                 <div className="relative mb-4 overflow-visible"> 
                   <Reveal delay={0.2 + i * 0.15}>
                     <div className="overflow-visible !visible">

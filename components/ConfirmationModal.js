@@ -120,13 +120,10 @@ export default function ConfirmationModal({
                         onClick={() => onToggleGuest(guest.nombre)} 
                         className="flex justify-between items-start cursor-pointer group py-3 border-b border-white/5"
                       >
-                        {/* Ajuste: max-w y leading para nombres largos */}
                         <span className={`font-sans text-sm transition-colors duration-300 max-w-[80%] leading-tight break-words ${guest.confirmed ? 'text-white' : 'text-white/30'}`}>
                           {guest.nombre}
                         </span>
-                        
-                        {/* Ajuste: flex-shrink-0 para que el círculo no se deforme */}
-                        <div className={`w-5 h-5 border rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-all duration-300 ${guest.confirmed ? 'bg-white border-white' : 'border-white/20'}`}>
+                         <div className={`w-5 h-5 border rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-all duration-300 ${guest.confirmed ? 'bg-white border-white' : 'border-white/20'}`}>
                           {guest.confirmed && (
                             <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
                               <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>

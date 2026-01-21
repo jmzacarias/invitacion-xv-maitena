@@ -21,8 +21,6 @@ export default function EventInfo({ attendance, onOpenConfirm }) {
         <FrameContainer>
           <Reveal>
             <div className="flex flex-col items-center w-full max-w-full">
-              
-              {/* ICONO LUCIDE - Líneas finas y tamaño grande */}
               <div className="relative w-32 h-32 flex items-center justify-center mb-6">
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -111,13 +109,10 @@ export default function EventInfo({ attendance, onOpenConfirm }) {
         </FrameContainer>
       </section>
 
-      {/* MODAL DE CALENDARIO ACTUALIZADO */}
       {isCalendarOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-6" onClick={() => setIsCalendarOpen(false)}>
           <div className="bg-[#1a1a1a] border border-[#c0c0c0]/20 p-8 rounded-2xl max-w-sm w-full flex flex-col items-center shadow-2xl" onClick={(e) => e.stopPropagation()}>
             <div className="text-[#c0c0c0] uppercase tracking-[0.2em] text-xs mb-8 font-bold">Agendar evento</div>
-            
-            {/* Google Calendar Link */}
             <a 
               href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV+de+Maite+-+Jah+Jireh&dates=20250321T210000/20250322T060000&location=Tres+Cruces+1915,+Rafael+Castillo" 
               target="_blank" 
@@ -126,8 +121,6 @@ export default function EventInfo({ attendance, onOpenConfirm }) {
             >
               Google Calendar
             </a>
-
-            {/* Apple / Outlook Link (Apuntando a tu archivo en public) */}
             <a 
               href="/evento.ics" 
               download="evento.ics"

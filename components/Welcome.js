@@ -2,7 +2,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-// ICONOS SVG MANUALES
 const IconMusic = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M9 18V5l12-2v13" />
@@ -34,13 +33,10 @@ export default function Welcome({ onEntry }) {
   const silverColor = "#C0C0C0";
   const silverStroke = "#94a3b8";
 
-    // Estilos de botones consistentes con el resto de la app
   const commonStyles = "w-full md:w-56 py-4 rounded-full text-[10px] uppercase tracking-[0.3em] font-light transition-all duration-300 flex items-center justify-center gap-3 active:scale-95 shadow-lg";
   const silverButton = `${commonStyles} bg-gradient-to-b from-[#ffffff] via-[#c0c0c0] to-[#8a8a8a] text-[#1a1a1a] border-t border-white/50`;
   const darkButton = `${commonStyles} bg-transparent border border-[#c0c0c0]/40 text-[#c0c0c0] hover:bg-white/5`;
 
-
-  // Configuración para la animación de dibujo del SVG
   const pathVariants = {
     initial: { pathLength: 0, opacity: 0 },
     animate: { 
@@ -49,7 +45,7 @@ export default function Welcome({ onEntry }) {
       transition: { 
         duration: 2.5, 
         ease: "easeInOut",
-        delay: 0.8 // Empieza a dibujarse poco después del nombre
+        delay: 0.8 
       }
     }
   };
@@ -109,11 +105,10 @@ export default function Welcome({ onEntry }) {
                 className="mb-8 w-full max-w-[300px] md:max-w-none mx-auto px-4"
             >
                 <div className="w-16 h-[1px] bg-neutral-600 mx-auto mb-2" />
-                <span className="text-[10px] uppercase tracking-[0.4em] text-neutral-400">Te damos a la invitación de</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-neutral-400">Te damos la bienvenida a la invitación de</span>
             </motion.div>
 
             <h1 className="font-serif text-4xl md:text-5xl mb-6 leading-tight tracking-[0.2em] flex flex-col items-center">
-                {/* LÍNEA SUPERIOR */}
                 <motion.div
                 initial={{ width: 0, opacity: 0 }}
                 animate={{ width: "240px", opacity: 0.6 }}
@@ -125,13 +120,11 @@ export default function Welcome({ onEntry }) {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-                    // Cambios: font-sans (sin serif), text-6xl (más grande), tracking-tighter (letras juntas)
                     className="font-sans text-4xl md:text-4xl font-normal tracking-normal mb-2 text-neutral-300 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                     >
                     XV
                 </motion.span>
                 
-                {/* MAITENA */}
                 <motion.span
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -141,7 +134,6 @@ export default function Welcome({ onEntry }) {
                 Maitena
                 </motion.span>
 
-                {/* LÍNEA INFERIOR */}
                 <motion.div
                 initial={{ width: 0, opacity: 0 }}
                 animate={{ width: "240px", opacity: 0.6 }} 
@@ -149,11 +141,10 @@ export default function Welcome({ onEntry }) {
                 className="h-[1px] bg-gradient-to-r from-transparent via-[#C0C0C0] to-transparent mt-6"
                 />
             </h1>
-            {/* MIS 15 AÑOS - APARECE AL FINAL */}
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.2, delay: 2.5 }} // El delay más largo para que sea lo último
+                transition={{ duration: 1.2, delay: 2.5 }} 
                 className="mb-10"
             >
                 <p className="font-sans text-[12px] md:text-[14px] font-light uppercase tracking-[0.6em] text-neutral-400">
@@ -161,13 +152,11 @@ export default function Welcome({ onEntry }) {
                 </p>
             </motion.div>
 
-            {/* FILIGRANA ANIMADA (DIBUJO) */}
             <div className="w-24 md:w-32 mb-8">
                 <div className="flex justify-center w-full">
                 <div className="mb-6 w-20 md:w-28 opacity-70 transform scale-y-[-1]">
                     <svg viewBox="0 0 118 69" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
                     <motion.g>
-                        {/* El path central aparece con un fade suave */}
                         <motion.path 
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -175,7 +164,6 @@ export default function Welcome({ onEntry }) {
                         fill={silverColor} 
                         d="M63.1049 54.58C62.7149 52.93 62.2248 51.44 61.6148 50.02C61.2248 49.1 60.8249 48.31 60.3949 47.61L59.4049 45.96C59.1249 45.49 58.5049 45.33 58.0349 45.62C57.8949 45.7 57.7949 45.82 57.1149 45.94C57.6549 46 57.5848 46.05 57.5448 46.13L56.6549 47.61C56.2249 48.32 55.8248 49.11 55.4348 50.02C54.8248 51.45 54.3349 52.94 53.9449 54.59C53.2749 57.48 53.1149 60.15 53.4949 62.32C53.6849 63.41 54.0049 64.37 54.4449 65.19C54.8749 66 56.2448 67.35 56.5948 67.55C56.7948 67.68 56.9749 67.78 57.1249 67.86C57.5749 68.1 58.0749 68.2 58.1749 68.22C58.2349 68.23 58.2949 68.24 58.3549 68.24C58.4149 68.24 58.4649 68.22 58.5149 68.21C58.5349 68.21 58.5649 68.21 58.5849 68.21C59.3849 68.15 59.7949 67.96 60.0149 67.81C60.1449 67.74 60.2749 67.66 60.4049 67.58C60.6349 67.45 60.8348 67.29 61.0248 67.13L61.1549 67.03C61.7349 66.51 62.2249 65.9 62.6049 65.2C63.0449 64.38 63.3649 63.42 63.5549 62.33C63.9349 60.17 63.7749 57.49 63.1049 54.59V54.58Z"
                         />
-                        {/* Estos paths se "dibujan" dinámicamente */}
                         <motion.path 
                         variants={pathVariants} initial="initial" animate="animate"
                         stroke={silverColor} strokeWidth="1.2" strokeLinecap="round" strokeMiterlimit="10" 
@@ -192,7 +180,6 @@ export default function Welcome({ onEntry }) {
                 </div>
             </div>
            
-              {/* Botones de Entrada */}
               <div className="flex flex-col md:flex-row gap-5 w-full max-w-[260px] md:max-w-none md:justify-center relative z-10">
                 <motion.button initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }} onClick={() => handleEntry(true)} className={silverButton}>
                   <IconMusic />

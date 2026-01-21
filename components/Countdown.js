@@ -28,9 +28,6 @@ export default function Countdown({ date }) {
 
   const Block = ({ value, label }) => (
     <div className="flex flex-col items-center justify-center min-w-[70px] md:min-w-[110px]">
-      {/* Añadimos py-2 (vertical) y px-1 (horizontal) al span.
-          'leading-none' asegura que el interlineado no desplace la máscara.
-      */}
       <span className="block py-2 px-1 text-3xl md:text-6xl font-serif font-light tracking-tighter bg-gradient-to-b from-[#ffffff] via-[#c0c0c0] to-[#7a7a7a] bg-clip-text text-transparent leading-none">
         {value.toString().padStart(2, "0")}
       </span>
@@ -46,14 +43,10 @@ export default function Countdown({ date }) {
 
   return (
     <section className="relative z-30 bg-[#2E2E2E] pt-16 pb-12 px-2 md:px-4 flex flex-col items-center overflow-hidden">
-      {/* 1. Gradiente de entrada */}
       <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-[#1a1a1a] to-transparent" />
       
       <Reveal>      
-        {/* 2. DIVIDER SUPERIOR */}
         <Divider /> 
-        
-        {/* 3. Título */}
         <div className="flex justify-center">
           <motion.h2 
             initial={{ opacity: 0 }}
@@ -63,8 +56,6 @@ export default function Countdown({ date }) {
             {mainTitle}
           </motion.h2>
         </div>
-
-        {/* 4. BLOQUE DE NÚMEROS */}
         <div className="flex flex-row justify-center items-center w-full max-w-[360px] md:max-w-2xl relative z-10 px-2 mx-auto">
           <Block value={timeLeft.d} label={dayLabel} />
           <VerticalDivider />
@@ -74,8 +65,6 @@ export default function Countdown({ date }) {
           <VerticalDivider />
           <Block value={timeLeft.s} label="Seg" />
         </div>
-
-        {/* 5. Reloj de arena */}
         <div className="mt-10 mb-10 flex justify-center items-center relative z-10">
           <motion.div 
             className="relative w-14 h-14 md:w-16 md:h-16 opacity-50"

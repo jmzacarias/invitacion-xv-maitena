@@ -5,19 +5,15 @@ import { motion } from "framer-motion";
 export default function LastPage({ guestData, onOpenConfirm, onOpenMusic }) {
   const saludo = "¡Nos vemos ahí!"
   
-  // Base de estilo unificada para dimensiones exactas
   const commonStyles = "w-full py-4 rounded-full text-[10px] uppercase tracking-[0.3em] font-light transition-all duration-300 active:scale-95 flex items-center justify-center";
   
-  // Estilo específico para Sugerir Canción (Bordeado)
   const buttonStyle = `${commonStyles} bg-transparent border border-[#c0c0c0]/40 text-[#c0c0c0] hover:bg-[#c0c0c0] hover:text-black`;
   
-  // Estilo específico para Confirmar (Plateado sólido)
   const silverButtonBg = `${commonStyles} bg-gradient-to-b from-[#ffffff] via-[#c0c0c0] to-[#8a8a8a] text-[#1a1a1a] border-t border-white/40 shadow-[0_4px_12px_rgba(0,0,0,0.3)]`;
 
   return (
     <section className="relative z-40 bg-[#2E2E2E] pt-24 pb-24 px-4 flex flex-col items-center overflow-hidden">
       
-      {/* Gradiente de entrada */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#1a1a1a] to-transparent opacity-100 z-0" />
 
       <Reveal>
@@ -45,7 +41,6 @@ export default function LastPage({ guestData, onOpenConfirm, onOpenMusic }) {
                 ¡No te olvides de confirmar asistencia <br/> y sugerir una canción!
               </p>
               
-              {/* Contenedor de botones con ancho controlado para que sean idénticos */}
               <div className="flex flex-col gap-4 w-full max-w-[260px] mx-auto">
                 <button 
                   onClick={onOpenConfirm} 
@@ -74,7 +69,6 @@ export default function LastPage({ guestData, onOpenConfirm, onOpenMusic }) {
         </div>
       </Reveal>
 
-      {/* Gradiente de salida */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent opacity-100" />
     </section>
   );

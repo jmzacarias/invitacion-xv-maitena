@@ -27,7 +27,6 @@ function InvitationContent({ params }) {
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
   const [attendance, setAttendance] = useState([]);
 
-  // EXTRAEMOS EL NOMBRE DEL INVITADO PRINCIPAL
   const mainGuestName = attendance.length > 0 ? attendance[0].nombre : "Invitado";
 
   useEffect(() => {
@@ -127,7 +126,6 @@ function InvitationContent({ params }) {
 
             <div className="flex flex-col lg:flex-row w-full bg-[#1a1a1a] gap-0">
               <div className="w-full lg:w-1/2 relative z-10 flex justify-center lg:justify-end">
-                {/* PASAMOS EL NOMBRE AL BOTÓN DE SUGERENCIA */}
                 <MusicSuggestion 
                   onOpenMusic={() => setIsMusicModalOpen(true)} 
                   guestName={mainGuestName}
@@ -146,7 +144,6 @@ function InvitationContent({ params }) {
           </div> 
         </div>
 
-        {/* PASAMOS EL NOMBRE AL MODAL DE MÚSICA */}
         <MusicModal 
           isOpen={isMusicModalOpen} 
           onClose={() => setIsMusicModalOpen(false)} 
