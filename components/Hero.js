@@ -9,14 +9,13 @@ export default function Hero({ event }) {
     offset: ["start start", "end start"],
   });
 
-  // Mantenemos el efecto de movimiento suave
-  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <section 
       ref={containerRef} 
-      className="relative h-screen w-full overflow-hidden z-0 bg-black flex items-start justify-center" 
+      className="relative h-screen w-full overflow-hidden z-0 bg-black" 
     >
       <motion.div 
         style={{ y: yImage, opacity: opacity }} 
@@ -25,14 +24,15 @@ export default function Hero({ event }) {
         <img 
           src="/hero.jpg" 
           alt="Maitena" 
-          // w-full asegura el ancho total
-          // object-contain evita que se recorte cualquier parte de la foto vertical
-          // object-top la pega al borde superior para que luzca mejor en el inicio
-          className="w-full h-full object-contain object-top" 
+          // Cambiamos a h-auto y quitamos h-full para que no intente centrarse verticalmente
+          className="w-full h-auto min-h-full object-contain object-top" 
         />
         
-        {/* Overlay opcional por si necesitas que el texto sobre la foto se lea mejor */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
+        {/* DEGRADADO REFORZADO: Más alto (h-1/2) y con negro puro al final */}
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/90 to-transparent z-20" />
+        
+        {/* Overlay extra para oscurecer un poco la base de la foto */}
+        <div className="absolute inset-0 bg-black/10 pointer-events-none" />
       </motion.div>
     </section>
   );
