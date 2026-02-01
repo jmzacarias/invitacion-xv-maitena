@@ -9,24 +9,30 @@ export default function Hero({ event }) {
     offset: ["start start", "end start"],
   });
 
-  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  // Mantenemos el efecto de movimiento suave
+  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
-  
   return (
     <section 
       ref={containerRef} 
-      className="relative h-screen w-full overflow-hidden z-0 bg-black" 
+      className="relative h-screen w-full overflow-hidden z-0 bg-black flex items-start justify-center" 
     >
       <motion.div 
         style={{ y: yImage, opacity: opacity }} 
-        className="absolute inset-0 h-[120%] w-full"
+        className="relative w-full h-full"
       >
         <img 
           src="/hero.jpg" 
           alt="Maitena" 
-          className="w-full h-full object-cover" 
+          // w-full asegura el ancho total
+          // object-contain evita que se recorte cualquier parte de la foto vertical
+          // object-top la pega al borde superior para que luzca mejor en el inicio
+          className="w-full h-full object-contain object-top" 
         />
+        
+        {/* Overlay opcional por si necesitas que el texto sobre la foto se lea mejor */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
       </motion.div>
     </section>
   );
