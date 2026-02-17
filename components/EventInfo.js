@@ -13,7 +13,7 @@ export default function EventInfo({ attendance, onOpenConfirm }) {
   
   const silverButtonBg = "w-full max-w-[260px] py-4 rounded-full text-[10px] uppercase tracking-[0.3em] font-light bg-gradient-to-b from-[#ffffff] via-[#c0c0c0] to-[#8a8a8a] text-[#1a1a1a] border-t border-white/40 shadow-[0_4px_12px_rgba(0,0,0,0.3)] active:scale-95 transition-all duration-200 flex justify-center items-center";
 
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=Tres+Cruces+1915+Rafael+Castillo`;
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=-34.710201849132694,-58.619612827630085`;
 
   return (
     <>
