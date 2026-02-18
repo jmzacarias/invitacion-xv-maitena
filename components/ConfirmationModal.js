@@ -11,7 +11,7 @@ export default function ConfirmationModal({
   onToggleGuest, 
   onConfirm 
 }) {
-  const PHONE_NUMBER = "5491136735438"; 
+  const PHONE_NUMBER = "5491152592181"; 
 
   const [showSummary, setShowSummary] = useState(false);
   const [isSending, setIsSending] = useState(false);
