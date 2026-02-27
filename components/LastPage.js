@@ -20,7 +20,7 @@ export default function LastPage({ guestData, onOpenConfirm, onOpenMusic }) {
         <div className="relative z-10 flex flex-col items-center w-full max-w-2xl mx-auto">
           <div className="flex flex-col items-center text-center mt-4 mb-10">
             <span className="text-white/40 tracking-[0.5em] text-[10px] uppercase font-light mb-8">
-              22.03.2026
+              21.03.2026
             </span>
 
             <div className="flex flex-col gap-2 mb-4">
